@@ -1,12 +1,10 @@
 package com.andrewelmasry.criminalintent;
 
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.Fragment;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.util.Log;
-import android.widget.Toast;
 
 /**
  * Created by Andrew on 2/4/16.
@@ -15,7 +13,7 @@ import android.widget.Toast;
  *
  *
  */
-public class CriminalActivity extends FragmentActivity {
+public class CrimeActivity extends FragmentActivity {
 
     Fragment fragment;
 
@@ -23,7 +21,7 @@ public class CriminalActivity extends FragmentActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crime);
+        setContentView(R.layout.activity_fragment);
 
         //First create an instsance of FragmentManager and use the me
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -44,11 +42,5 @@ public class CriminalActivity extends FragmentActivity {
         }
     }
 
-    public void onAttachFragment() {
-        super.onAttachFragment(fragment);
-        Log.i(TAG, "onAttachedCalled");
-        Toast toast = Toast.makeText(this,fragment.toString(), Toast.LENGTH_LONG);
-
-    }
 
 }
